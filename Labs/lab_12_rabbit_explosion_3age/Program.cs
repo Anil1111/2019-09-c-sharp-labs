@@ -22,10 +22,10 @@ namespace lab_12_rabbit_explosion_3age
             var s = new Stopwatch();
             s.Start();
 
-            var grandpa = new Rabbit("Grandpa", 0, minBirthYear);
+            var grandpa = new Rabbit("Grandpa", 0, minBirthYear, true);
             while (currentPopulation < populationLimit)
             {
-                grandpa.AttemptBirth("bob", 0, minBirthYear);
+                grandpa.AttemptBirth("bob", 0, minBirthYear, true);
 
                 currentPopulation = grandpa.GetRabbitCount();
 
@@ -51,25 +51,27 @@ namespace lab_12_rabbit_explosion_3age
         public int Age;
         public int MinBirthAge;
         public string DOB;
+        public bool IsCanProduceTree;
 
         List<Rabbit> rabbits;
 
         public Rabbit()
         {
-            Init("Bob", 0, 3);
+            Init("Bob", 0, 3, true);
         }
 
-        public Rabbit(string name, int age, int birth_age)
+        public Rabbit(string name, int age, int birth_age, bool IsCanProduceTree)
         {
-            Init(name, age, birth_age);
+            Init(name, age, birth_age, IsCanProduceTree);
         }
 
-        private void Init(string name, int age, int birth_age)
+        private void Init(string name, int age, int birth_age, bool IsCanProduceTree)
         {
             rabbits = new List<Rabbit>();
             this.Name = name;
             this.Age = age;
             this.MinBirthAge = birth_age;
+            this.IsCanProduceTree = IsCanProduceTree;
         }
 
         private void Birthday()
@@ -77,20 +79,24 @@ namespace lab_12_rabbit_explosion_3age
             Age++;
         }
 
-        public void AttemptBirth(string name, int age, int birth_age)
+        public void AttemptBirth(string name, int age, int birth_age, bool IsCanProduceTree)
         {
             Birthday();
 
             if (Age < MinBirthAge)
                 return;
 
-            for (int i = 0; i < rabbits.Count; i++)
-                rabbits[i].AttemptBirth(name, age, birth_age);
+            if (this.IsCanProduceTree)
+            {
+                for (int i = 0; i < rabbits.Count; i++)
+                    rabbits[i].AttemptBirth(name, age, birth_age, IsCanProduceTree);
+            }
 
-            var rabbit = new Rabbit(name, 0, birth_age);
+            var rabbit = new Rabbit(name, 0, birth_age, IsCanProduceTree);
             rabbit.DOB = DateTime.Now.ToString();
             rabbits.Add(rabbit);
         }
+
         public int GetRabbitCount()
         {
             int total = 0;

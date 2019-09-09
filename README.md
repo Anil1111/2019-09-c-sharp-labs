@@ -82,27 +82,27 @@ Method = Function
 
 ```cs
 
-	class Program
-    {
-        static void Main(string[] args)
-        {
-            var person01 = new Person();
-            person01.Name = "Fantasia";
-            person01.setNINO("ABC123");
+class Program
+{
+	static void Main(string[] args)
+	{
+		var person01 = new Person();
+		person01.Name = "Fantasia";
+		person01.setNINO("ABC123");
 
-            Console.WriteLine(person01.GetNINO());
-        }
-    }
+		Console.WriteLine(person01.GetNINO());
+	}
+}
 
-    class Person
-    {
-        private string NINO;
-        public string Name;
+class Person
+{
+	private string NINO;
+	public string Name;
 
-        //Getter and Setter methods to read / write data
-        public string GetNINO() { return NINO; }
-        public void setNINO(string nino) { NINO = nino; }
-    }
+	//Getter and Setter methods to read / write data
+	public string GetNINO() { return NINO; }
+	public void setNINO(string nino) { NINO = nino; }
+}
 
 ```
 
@@ -812,6 +812,205 @@ WPF Windows Presentation Foundation
 		Everyone else loves JSON.
 
 	
+	
+## Static
+
+
+```cs
+class MyClass{
+
+	private int _hideMe; //FIELD (OOP encapsulation)
+	
+	public string Name {get;set;} //public PROPERTY (OOP abstraction)
+	
+	public void DoThis(){}
+	
+}
+
+
+abstract class Idea{
+	abstract void DoThis();	//no 'BODY' or no IMPLEMENTATION
+```
+	
+ABSTRACT CLASS ==> cannot instantiate
+CONCRETE (REGULAR) CLASS => can instantiate
+	
+	var m = new MyClass();
+	
+OOP Polymorphism	
+	
+	Parent : virtual (had code body)
+	Child : override (optional)
+	
+	
+OOP Abstract
+
+	Parent : virtual (empty)
+	Child : override (mandatory)
+
+
+OOP Inheritance
+
+	Child inherits from Parent
+
+
+Access Modifiers : public, private, protected, internal
+
+	public		: see from anywhere
+	private		: hidden inside class
+	protected	: hidden inside class and derived child classes
+	internal	: within compiled EXE : visible in this scope
+	
+			library MYLIBRARY
+	
+	
+Static
+
+```cs
+	class MyClass{
+		
+		private int _hidden;					//INSTANCE
+		
+		public string Property01 {get; set; }	//INSTANCE
+		
+		public void Method01{}					//INSTANCE
+		
+		public MyClass(){}	//constructor
+	}
+	
+	
+
+	var m = new MyClass(){}	//constructor
+	    m = instance
+		    m.Property01;
+			m.Method01();
+			
+	
+	Math.PI;
+	Math.Random();
+	Math.Round();
+	
+		STATIC MEMBERS ATTACHED DIRECTLY TO MATH CLASS
+		
+	class MyClass{
+	
+		static public int Property01 {get; set; }	//CLASS / STATIC
+		
+		static public void DoThis(){}				//CLASS / STATIC
+	}
+	
+		MyClass.Property01;
+		MyClass.DoThis();
+```
+
+
+
+## SQL
+
+	Relational Database
+
+	Structure Query Language
+		
+		Microsft			MS-SQL (paid product)
+		Free				MYSQL
+	
+Relational Databse
+	
+	Tables
+		ID
+		Fields
+	
+	User
+		UserId;
+		UserName;
+		
+	Category
+		CategoryId;
+		CategoryName;
+	
+	We can create RELATIONSHIPS
+	
+	User
+		UserId;
+		UserName;
+		CategoryId;		FOREIGN KEY (Id in another table)
+	
+	Id	'IDENTITY' ==> Unique, normally auto-increment to the highest value (+1)
+	
+Proposal today
+
+	SQL : Create database with rabbit tables
+	Entity : C# ==> hook into this database
+					View, Update Rabbits
+	
+	
+SQL commands
+	
+	View => Server Explorer => Data Connection => Add
+		(local)\mssqllocaldb
+	View => SQL Object Explorer
+	
+		Gives access ot the local computer using SQL server
+		
+		Files are called '.mdf' Microsoft Databse File
+		Stored in C:\Users\%username%\ folder
+		
+		
+## --- insert sql code here ------
+
+--which databse to use
+use master
+
+drop database if exists RabbitDb
+go
+
+create database RabbitDb
+go
+
+use RabbitDb
+go
+
+
+--CREATE TABLE Rabbits(
+--	RabbitId INT NOT NULL IDENTITY PRIMARY KEY,
+--	Age INT NULL,
+--	Name VARCHAR(50) NULL
+--)
+
+--select 'Here is a comment'
+
+
+
+
+
+
+
+## Connecting to a database
+
+Microsoft can connect directly to a database using Entity Framework.
+
+EF6		: Framework
+EFCore	: Lighter, more open source
+
+If we begin using EF6 there is more support so it's easier to get going
+
+New Console AppendAllText (Framework)
+Add Entity
+Connect to database	(localdb)\mssqllocaldb
+View Rabbits
+
+
+//Homework
+New WPF Just_Do_It_12_Rabbit_Explosion using .NET Framework
+Add 2 text boxes and an ADD button
+Add Entity
+When you click the ADD button,
+	ADD A NEW RABBIT
+	DISPLAY A RABBIT PICTURE FOR ONE SECOND
+	
+Create a TEXTBLOCK and do a foreach loop to output the rabbit data into this text block
+
+Ideas? Add timer and start adding own random rabbits
 	
 	
 	

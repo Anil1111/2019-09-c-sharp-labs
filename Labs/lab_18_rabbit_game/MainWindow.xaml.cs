@@ -23,11 +23,9 @@ namespace lab_18_rabbit_game
     {
         DispatcherTimer timer;
         Image Image01;
+        RotateTransform rotateTransform = new RotateTransform(0);
 
         int x = 0;
-
-
-        RotateTransform rotateTransform = new RotateTransform(45);
 
         public MainWindow()
         {
@@ -49,6 +47,9 @@ namespace lab_18_rabbit_game
                 Source = new BitmapImage(new Uri("Images/rabbit.png", UriKind.Relative)),
             };
 
+            rotateTransform.CenterX = 50;
+            rotateTransform.CenterY = 50;
+
             Image01.RenderTransform = rotateTransform;
 
             Canvas01.Children.Add(Image01);
@@ -59,10 +60,13 @@ namespace lab_18_rabbit_game
         {
             x += 1;
             Canvas.SetLeft(Image01, x);
-            Image01.RenderTransform = rotateTransform;
-            rotateTransform.CenterX = 50;
-            rotateTransform.CenterY = 50;
-            rotateTransform.Angle += 6;
+
+            rotateTransform.Angle += 1;
+        }
+
+        public void TimerTicked(int millis)
+        {
+
         }
     }
 }
