@@ -67,6 +67,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_22_Northwind", "Console
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_23_LINQ", "lab_23_LINQ\lab_23_LINQ.csproj", "{40ADC3A5-EBCF-499F-9E03-3ADF967E1230}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_24_customers_app", "lab_24_customers_app\lab_24_customers_app.csproj", "{F041F989-ECEE-48B5-B7CB-A815E1853A50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -201,6 +203,10 @@ Global
 		{40ADC3A5-EBCF-499F-9E03-3ADF967E1230}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40ADC3A5-EBCF-499F-9E03-3ADF967E1230}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40ADC3A5-EBCF-499F-9E03-3ADF967E1230}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F041F989-ECEE-48B5-B7CB-A815E1853A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F041F989-ECEE-48B5-B7CB-A815E1853A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F041F989-ECEE-48B5-B7CB-A815E1853A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F041F989-ECEE-48B5-B7CB-A815E1853A50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
