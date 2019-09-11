@@ -7,17 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
         KeyDown="Window_KeyDown">
-    <Window.Resources>
-        <ControlTemplate x:Key="MyButtonTemplate" TargetType="Button">
-            <Grid>
-                <Border Background="Black" Margin="5 5 0 0" />
-                <Border BorderBrush="Black" BorderThickness="0"
-                Background="Yellow" Margin="0 0 5 5">
-                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">OK</TextBlock>
-                </Border>
-            </Grid>
-        </ControlTemplate>
-    </Window.Resources>
 
     <Grid Background="#4f7788">
         <Grid.ColumnDefinitions>

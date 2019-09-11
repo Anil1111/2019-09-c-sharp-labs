@@ -224,7 +224,6 @@ namespace lab_18_Rabbit_Database_CRUD
 
                         using (var db = new RabbitDbEntities())
                         {
-
                             //read rabbit from database by ID
                             var rabbitToUpdate = db.Rabbits.Find(rabbit.RabbitId);
 
