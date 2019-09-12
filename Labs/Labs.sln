@@ -69,6 +69,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_23_LINQ", "lab_23_LINQ\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_24_customers_app", "lab_24_customers_app\lab_24_customers_app.csproj", "{F041F989-ECEE-48B5-B7CB-A815E1853A50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_25_data_types", "lab_25_data_types\lab_25_data_types.csproj", "{B55243EC-74F4-43A7-A8CC-251776FE5684}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_26_exceptions", "lab_26_exceptions\lab_26_exceptions.csproj", "{6EEFC17B-1093-47AC-9330-859E3BEF0FD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -207,6 +211,14 @@ Global
 		{F041F989-ECEE-48B5-B7CB-A815E1853A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F041F989-ECEE-48B5-B7CB-A815E1853A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F041F989-ECEE-48B5-B7CB-A815E1853A50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B55243EC-74F4-43A7-A8CC-251776FE5684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B55243EC-74F4-43A7-A8CC-251776FE5684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B55243EC-74F4-43A7-A8CC-251776FE5684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B55243EC-74F4-43A7-A8CC-251776FE5684}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EEFC17B-1093-47AC-9330-859E3BEF0FD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EEFC17B-1093-47AC-9330-859E3BEF0FD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EEFC17B-1093-47AC-9330-859E3BEF0FD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EEFC17B-1093-47AC-9330-859E3BEF0FD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

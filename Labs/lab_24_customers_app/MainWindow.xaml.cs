@@ -125,13 +125,11 @@ namespace lab_24_customers_app
 
         private void CustomerSearch_KeyUp(object sender, KeyEventArgs e)
         {
-            //ListBoxCustomers.ItemsSource = searchByName(CustomerSearch.Text);
             ListBoxCustomers.ItemsSource = searchForCustomer(CustomerSearch.Text, CitySearch.Text);
         }
 
         private void CitySearch_KeyUp(object sender, KeyEventArgs e)
         {
-            //ListBoxCustomers.ItemsSource = searchByCity(CitySearch.Text);
             ListBoxCustomers.ItemsSource = searchForCustomer(CustomerSearch.Text, CitySearch.Text);
         }
 
